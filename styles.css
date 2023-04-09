@@ -12,9 +12,10 @@
     padding: 0;
 }
 
+
 body {
     background-image: linear-gradient(to bottom, rgba(28, 28, 28, 0.9), rgba(28, 28, 28, 0.5)), url('Diseño/fondo.png');
-    background-size: cover;
+    background-size: auto;
     width: 100%;
     height: 100vh;
     background-position: center;
@@ -43,12 +44,25 @@ body {
 }
 
 .img-robot {
-    position: absolute; /* posiciona la imagen de forma absoluta dentro del contenedor */
-    top: 40%; /* distancia desde la parte superior del contenedor */
-    left: 65%; /* distancia desde la parte izquierda del contenedor */
-    width: 500px; 
+    width: 50%;
+    max-width: 100vh;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 83%;
+    transform: translate(-50%, -50%);
 }
-
+@media screen and (max-width: 768px) {
+    .img-robot {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        position: absolute;
+        top: 80%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+    }
+}
 .header {
     background-color: var(--colornav);
     display: flex;
