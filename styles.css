@@ -43,26 +43,65 @@ body {
     color: var(--colorh1);
 }
 
-.img-robot {
-    width: 50%;
-    max-width: 100vh;
-    height: 60%;
+.robot {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 600px;
+    width: 600px;
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .robot {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        height: 300px;
+        width: 300px;
+        margin-bottom: 0px;
+    }
+
+@media screen and (min-width: 768px) and (max-width: 1024px), (max-width: 320px) {
+    .robot {
+        display: none;
+        }
+}
+
+    /*     width: 50%;
+    height: 70vh;
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 83%;
     transform: translate(-50%, -50%);
+    overflow: hidden; */
 }
-@media screen and (max-width: 768px) {
+
+.robot img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* @media screen and (max-width: 768px) {
     .img-robot {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
         width: 100%;
-        max-width: 400px;
-        height: auto;
+        max-width: 600px;
+        height: 80vh;
         position: absolute;
-        top: 80%;
+        top: 100%;
         left: 80%;
         transform: translate(-50%, -50%);
+        overflow: hidden;
     }
-}
+} */
 .header {
     background-color: var(--colornav);
     display: flex;
