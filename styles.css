@@ -61,17 +61,22 @@ body {
         position: fixed;
         bottom: 0;
         right: 0;
-        height: 300px;
-        width: 300px;
+        height: 500px;
+        width: 400px;
         margin-bottom: 0px;
     }
 
-@media screen and (orientation: landscape), (max-width: 320px) {
-    .robot {
-        display: none;
+    @media screen and (orientation: landscape) {
+        .robot {
+            display: none;
         }
-}
+    }
 
+    @media screen and (max-width: 720px){
+        .robot {
+            display: none;
+        }
+    }
     /*     width: 50%;
     height: 70vh;
     position: absolute;
@@ -102,6 +107,121 @@ body {
         overflow: hidden;
     }
 } */
+/* Boton registrarse y iniciar sesión */
+.boton-reg {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 50px;
+    width: 220px;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.boton-reg span {
+    color: white;
+    transition: .4s ease-in-out all;
+    position: absolute;
+    left: 25px;
+}
+
+.boton-reg .icono {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    left: 0px;
+    transition: .3s ease-in-out all;
+    opacity: 0;
+}
+
+.boton-reg svg {
+    color: #fff;
+    width: 35px;
+    height: 35px;
+}
+
+.boton-reg:hover .icono {
+    left: calc(100% - 50px);
+    opacity: 1;
+}
+
+.boton-reg:hover span {
+    left: 10px;
+}
+
+/* Boton Iniciar Sesión */
+.boton-ini {
+    background-color: blue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 280px;
+    height: 50px;
+    width: 250px;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.boton-ini span {
+    color: white;
+    transition: .4s ease-in-out all;
+    position: absolute;
+    left: 25px;
+}
+
+.boton-ini .icono {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    transition: .3s ease-in-out all;
+    opacity: 0;
+}
+
+.boton-ini svg {
+    color: #fff;
+    width: 35px;
+    height: 35px;
+}
+
+.boton-ini:hover .icono {
+    left: calc(100% - 50px);
+    opacity: 1;
+}
+
+.boton-ini:hover span {
+    left: 10px;
+}
+
+@media screen and (max-width: 720px) {
+    .boton-ini {
+        background-color: blue;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        left: 0px;
+        height: 50px;
+        width: 250px;
+        border-radius: 20px;
+        justify-content: center;
+    }
+
+    .boton-reg {
+        background-color: green;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 50px;
+        top: 350px;
+        width: 220px;
+        border-radius: 20px;
+        justify-content: center;
+    }
+}
+
 .header {
     background-color: var(--colornav);
     display: flex;
